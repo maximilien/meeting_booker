@@ -41,7 +41,6 @@ class MeetingBooker
   end
 
   def authorize
-    puts CREDENTIALS_PATH
     FileUtils.mkdir_p(File.dirname(CREDENTIALS_PATH))
 
     client_id = Google::Auth::ClientId.from_file(CLIENT_SECRETS_PATH)
